@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="0.1">
+    <Name Default="LogStash">LogStash</Name>
+    <Overview>
+    A Work in progress Attempt at building a template to make Elastic's LogStash work on UnRAID Docker
+    </Overview>
+    <Repository>logstash:8.7.1</Repository>
+    <Registry>https://hub.docker.com/_/elasticsearch</Registry>
+    <Network>bridge</Network>
+    <Support>http://lime-technology.com/forum/index.php?topic=40654.0</Support>
+    <WebUI>http://[IP]:[PORT:32400]/web/index.html</WebUI>
+    <Icon>http://d2631fvi2jdnb6.cloudfront.net/docker/limetech/plex.png</Icon>
+    <Category>MediaApp:Music MediaServer:Photos Status:Stable</Category>
+    <Config Type="Path" Name="Config directory" Target="/config" Default="/mnt/user/appdata/PMS" Mode="rw" Description="This is where PMS will store it's databases and configuration." Required="true">/mnt/user/appdata/PMS</Config>
+    <Config Type="Variable" Name="Node Discovery Typee" Target="PLEXPASS_USERNAME" Default="single-node" Description="Elastic Discovery Mode" Mask="false" Display="advanced" Required="true">single-node</Config>
+    <Config Type="Port" Name="Logstash port" Target="9200" Default="9200" Mode="tcp" Description="" Display="advanced" Required="true">9200</Config>
+    <Config Type="Port" Name="Logstash port" Target="9300" Default="9300" Mode="tcp" Description="" Display="advanced" Required="true">9300</Config>
+</Container>
